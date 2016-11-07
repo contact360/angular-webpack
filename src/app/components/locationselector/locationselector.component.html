@@ -1,0 +1,25 @@
+<div class="">
+    <div class="form-group row">
+        <label for="location" class="col-xs-3 col-form-label">Location</label>
+        <div class="col-xs-9">
+            <select class="form-control col-xs-9" name="location" id="location" [(ngModel)]="selectedLocation" (change)="onLocationChange($event)">
+                <option *ngIf="locations.length" value=''>Please Select...</option>
+                <option *ngFor="let location of locations" value="{{location.id}}">
+                    {{location.text}}
+                </option>
+            </select>
+            
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="sublocation" class="col-xs-3 col-form-label">Sub-location</label>
+        <div class="col-xs-9">
+            <select class="form-control col-xs-9" name="sublocation" id="sublocation" [disabled]="!(sublocations && sublocations.length)">
+                <option *ngIf="sublocations.length">Please Select...</option>
+                <option *ngFor="let sublocation of sublocations">
+                    {{sublocation}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
