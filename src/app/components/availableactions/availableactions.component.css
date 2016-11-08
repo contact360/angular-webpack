@@ -1,0 +1,11 @@
+.action {
+    background: teal;
+    margin: 2px;
+    text-align: center;
+}
+
+.actions a {
+    text-decoration: none;
+    color: black;
+}
+

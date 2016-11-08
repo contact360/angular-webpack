@@ -8,8 +8,10 @@ import { LocationSelectorComponent } from './components/locationselector/locatio
 import { ChannelSelectorComponent } from './components/channelselector/channelselector.component';
 import { RecordInformationComponent } from './components/recordinformation/recordinformation.component';
 import { RecordSelectorComponent } from './components/recordselector/recordselector.component';
+import { AvailableActionsComponent } from './components/availableactions/availableactions.component';
 
 import { AccountService } from './account.service';
+import { ActionService } from './actions.service';
 @NgModule({
   imports: [
     BrowserModule, FormsModule,HttpModule
@@ -19,9 +21,10 @@ import { AccountService } from './account.service';
     , LocationSelectorComponent
     , ChannelSelectorComponent
     , RecordInformationComponent
-    ,RecordSelectorComponent
+    , RecordSelectorComponent
+    , AvailableActionsComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [ AccountService ]
+  providers: [ AccountService, ActionService ]
 })
 export class AppModule { }

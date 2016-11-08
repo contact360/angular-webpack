@@ -1,0 +1,12 @@
+<div class="outer">
+    <h2>Available Actions</h2>
+    <div class="inner">
+        <div *ngFor="let action of actions" class="col-md-3 actions">
+            <a href="{{action.url}}">
+                <div class="action">
+                    {{action.name}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
