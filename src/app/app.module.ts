@@ -7,6 +7,8 @@ import { ServiceAuthComponent } from './components/serviceauth/serviceauth.compo
 import { LocationSelectorComponent } from './components/locationselector/locationselector.component';
 import { ChannelSelectorComponent } from './components/channelselector/channelselector.component';
 import { RecordInformationComponent } from './components/recordinformation/recordinformation.component';
+import { RecordSelectorComponent } from './components/recordselector/recordselector.component';
+
 import { AccountService } from './account.service';
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { AccountService } from './account.service';
     , LocationSelectorComponent
     , ChannelSelectorComponent
     , RecordInformationComponent
+    ,RecordSelectorComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [ AccountService ]

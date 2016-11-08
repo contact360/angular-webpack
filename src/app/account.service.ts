@@ -12,6 +12,9 @@ export class AccountService {
     constructor(private http:Http){
 
     }
+    getAccounts(){
+        return this.http.get('./mock-data/accounts.json').map(response => response.json())
+    }
     getAccountInformation() : Observable<AccountInformation[]> {
         return this.http.get('./mock-data/recordinformation.json').map(response => response.json());
     }
