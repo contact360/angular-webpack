@@ -1,24 +1,18 @@
 import { Component } from '@angular/core';
-
+import { AccountService } from '../../account.service';
 @Component({
   selector: 'record-information',
   templateUrl: './recordinformation.component.html',
-  //styleUrls: ['./app.component.css'],
+  styleUrls: ['./recordinformation.component.css'],
   
 })
 export class RecordInformationComponent { 
 
     rows: Array<any>;
 
-    constructor(){
-        this.rows = [{value:"J SMITH",label:"Account Holder"
-        },
-            {"label" : "Property Reference", "value": "6334404"},
-{"label" : "Address", "value": "MORTON LN, BEVERLY, EAST RIDING"},
-{"label" : "Postcode", "value": "HU17 9DB"},
-{"label" : "E-Billing", "value": "On"}
-
-        ];
+    constructor( service : AccountService){
+        service.getAccountInformation().subscribe( data =>
+            this.rows = data)
     }    
     
 }
