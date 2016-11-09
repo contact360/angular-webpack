@@ -11,6 +11,8 @@ let ACTIONS:any[] = [
 })
 export class AvailableActionsComponent { 
 
+    actions : Array<any>;
+
     constructor(service : ActionService ) {
         service.getAvailableActions().subscribe( data =>
             this.actions = data)
